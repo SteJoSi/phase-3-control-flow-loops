@@ -10,16 +10,6 @@ def happy_new_year
   puts "Happy New Year!"
 end
 
-def example_code
-  n = 0
-  while n < 10
-    puts n
-    n += 1
-  end
-end
-
-binding.pry
-
 # No need to modify this code! Use this to implement the fizzbuzz_printer method.
 def fizzbuzz(num)
   if num % 3 == 0 && num % 5 == 0
@@ -33,12 +23,27 @@ def fizzbuzz(num)
   end
 end
 
-
-
+# create a loop that starts at 1 and ends at 100 
+# multiples of 3 = "Fizz"
+# multiples of 5 = "Buzz"
+# multiples of 5 and 3 = "FizzBuzz"
 def fizzbuzz_printer
-  # your code here
+  counter = 1
+  until counter == 100
+    puts fizzbuzz(counter)
+    counter += 1
+  end
+  puts fizzbuzz(counter)
 end
 
+# binding.pry
+
+# a string is taken in as the argument, that string needs to be reversed and returned
+# a new string is declared 
 def reverse_string(str)
-  # your code here
+    new_str = ''
+    str.size.times do |i|
+      new_str << str[-1 * i - 1]
+    end
+    new_str
 end
